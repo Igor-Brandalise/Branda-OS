@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.bg-windows {
+  background-image: url('/public/Windows-11.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}

@@ -1,7 +1,11 @@
 import "./index.css";
 
 function App() {
-  return <div></div>;
+  return (
+    <div className="bg-windows">
+
+    </div>
+  )
 }
 
 export default App;
