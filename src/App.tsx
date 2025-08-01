@@ -11,7 +11,7 @@ function App() {
   }
 
   if (tela === "principal") {
-    return <TelaInicial />;
+    return <TelaInicial voltarParaBoot={() => setTela("boot")}/>;
   }
 }
 
