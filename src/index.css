@@ -9,7 +9,7 @@ body,
 }
 
 .bg-windows-off {
-  background-image: url("/windows-dark.webp");
+  background-image: url("/dark-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@ body,
 }
 
 .bg-windows-on {
-  background-image: url("/Windows-11.jpg");
+  background-image: url("/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,4 +67,19 @@ body,
 .botao-power:hover {
   box-shadow: rgb(0, 0, 0.8) 5px 5px 30px; 
   transform: translateY(-4px); 
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.6s ease forwards;
 }
