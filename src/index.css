@@ -1,10 +1,35 @@
 @import "tailwindcss";
 
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .bg-windows {
-  background-image: url('/public/Windows-11.jpg');
+  background-image: url("/teladark.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+}
+
+
+.botao-boot {
+  transition: all 0.3s ease;
+  border-radius: 45%;
+  padding: 2.5rem;
+  background-color: #525252;
+  border: 2px solid white; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-boot:hover {
+  transform: translateY(-6px);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9));
 }
