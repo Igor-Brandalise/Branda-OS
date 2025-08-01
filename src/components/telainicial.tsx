@@ -2,11 +2,11 @@ import { FaPowerOff } from "react-icons/fa";
 import { Github, Linkedin } from "lucide-react";
 import { Separator } from "./separator";
 
-export function TelaInicial({
-  voltarParaBoot,
-}: {
+type Props = {
   voltarParaBoot: () => void;
-}) {
+}
+
+export function TelaInicial({voltarParaBoot}: Props) {
   return (
     <div className="bg-windows-on">
       <main>
