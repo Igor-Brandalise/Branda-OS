@@ -5,9 +5,10 @@ import { Separator } from "./separator";
 
 type Props = {
   voltarParaBoot: () => void;
+   irParaDesktop: () => void
 };
 
-export function TelaInicial({ voltarParaBoot }: Props) {
+export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
   return (
     <div className="bg-windows-on ">
       <main className="slide-down">
@@ -40,7 +41,7 @@ export function TelaInicial({ voltarParaBoot }: Props) {
             A little more about me.
           </p>
 
-          <button className="botao-power border-2 w-[13rem] rounded-4xl border-zinc-300 backdrop-blur-xl text-stone-50  p-3 text-[20px] slide-down">
+          <button className="botao-power border-2 w-[13rem] rounded-4xl border-zinc-300 backdrop-blur-xl text-stone-50  p-3 text-[20px] slide-down " onClick={irParaDesktop}>
             Home Screen
           </button>
         </section>
