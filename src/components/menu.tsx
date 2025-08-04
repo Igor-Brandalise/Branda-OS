@@ -15,15 +15,18 @@ import {
 
 type Props = {
   voltarParaBoot: () => void;
+  AboutMe: () => void;
 };
 
-export function MenuLateral({ voltarParaBoot }: Props) {
+export function MenuLateral({ voltarParaBoot, AboutMe }: Props) {
   const [aberto, setAberto] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+  console.log("clicado", AboutMe);
+
   return (
     <div className="fixed bottom-4 left-4 z-50">
-      {/* Botão com imagem */}
+      
       <button
         onClick={(e) => {
           e.stopPropagation(); // Impede que clique no botão feche o menu
@@ -43,9 +46,9 @@ export function MenuLateral({ voltarParaBoot }: Props) {
       {aberto && (
         <div
           ref={menuRef}
-          className="absolute bottom-20 left-0 w-[600px] h-[500px] bg-zinc-900/95 text-white rounded-2xl shadow-2xl p-6 animate-slide-up"
+          className="absolute bottom-20 left-0 w-[600px] h-[500px] bg-zinc-900/99 text-white rounded-2xl shadow-2xl p-6 animate-slide-up"
         >
-          {/* Conteúdo do menu */}
+          
 
           <form onSubmit={searchOnGoogle} className=" relative w-full ">
             <input
@@ -67,23 +70,28 @@ export function MenuLateral({ voltarParaBoot }: Props) {
           </h2>
 
           <div className="mt-7">
-            <ul className="flex flex-row gap-8 ">
-              <li className="flex items-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1">
+            <ul className="flex flex-row gap-8">
+              <li
+                className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-2 cursor-pointer"
+                onClick={() => {
+                  AboutMe();
+                }}
+              >
                 <CircleUserRound size={40} className="text-white" />
                 <p className="text-[12px] text-zinc-300">AboutMe</p>
               </li>
 
-              <li className="flex items-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1">
+              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer">
                 <Gamepad size={40} />
                 <p className="text-[12px] text-zinc-300">My Top Games</p>
               </li>
 
-              <li className="flex items-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1">
+              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer">
                 <Github size={40} />
                 <p className="text-[12px] text-zinc-300">My recent Work</p>
               </li>
 
-              <li className="flex items-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1">
+              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-2 cursor-pointer">
                 <img src="/discord-icon.svg" alt="" className="h-10 w-10" />
                 <p className="text-[12px] text-zinc-300">My Discord</p>
               </li>
@@ -157,7 +165,7 @@ export function MenuLateral({ voltarParaBoot }: Props) {
             <button
               className="hover:bg-gray-200/20 transition-colors rounded-[50px] p-2"
               onClick={voltarParaBoot}
-              >
+            >
               <Power size={22} />
             </button>
           </footer>
