@@ -22,7 +22,6 @@ export function MenuLateral({ voltarParaBoot, AboutMe }: Props) {
   const [aberto, setAberto] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  console.log("clicado", AboutMe);
 
   return (
     <div className="fixed bottom-4 left-4 z-50">
