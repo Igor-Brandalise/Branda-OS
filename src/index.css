@@ -26,13 +26,12 @@ body,
   width: 100vw;
 }
 
-
 .botao-boot {
   transition: all 0.3s ease;
   border-radius: 45%;
   padding: 2.5rem;
   background-color: #525252;
-  border: 2px solid white; 
+  border: 2px solid white;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -46,9 +45,9 @@ body,
 .botao-boot-2 {
   transition: all 0.3s ease;
   border-radius: 45%;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: #525252;
-  border: 2px solid rgba(255, 255, 255, 0.6); 
+  border: 2px solid rgba(255, 255, 255, 0.6);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -61,12 +60,12 @@ body,
 
 .botao-power {
   transition: all 0.3s ease;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0); 
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .botao-power:hover {
-  box-shadow: rgb(0, 0, 0.8) 5px 5px 30px; 
-  transform: translateY(-4px); 
+  box-shadow: rgb(0, 0, 0.8) 5px 5px 30px;
+  transform: translateY(-4px);
 }
 
 @keyframes slideDown {
@@ -82,4 +81,34 @@ body,
 
 .slide-down {
   animation: slideDown 0.6s ease forwards;
+}
+
+@layer utilities {
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.menu {
+  transition: all 0.3s ease;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu:hover {
+  transform: translateY(-6px);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
