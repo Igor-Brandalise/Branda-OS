@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./index.css";
 import { TelaBoot } from "./components/telaboot";
 import { TelaInicial } from "./components/telainicial";
+import { Desktop } from "./components/desktop";
 
 function App() {
   const [tela, setTela] = useState("boot");
@@ -11,8 +12,14 @@ function App() {
   }
 
   if (tela === "principal") {
-    return <TelaInicial voltarParaBoot={() => setTela("boot")}/>;
+    return <TelaInicial voltarParaBoot={() => setTela("boot")} irParaDesktop={() => setTela("desktop")}/>;
   }
+
+if (tela === "desktop") {
+  return <Desktop voltarParaBoot={() => setTela("boot")} />;
+}
+
+  return null;
 }
 
 export default App;
