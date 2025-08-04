@@ -31,7 +31,12 @@ function App() {
   }
 
   if (tela === "aboutMe") {
-    return <AboutMe voltarParaDesktop={() => setTela("desktop")} voltarParaBoot={() => setTela("boot")}/>;
+    return (
+      <AboutMe
+        voltarParaDesktop={() => setTela("desktop")}
+        voltarParaBoot={() => setTela("boot")}
+      />
+    );
   }
 
   return null;
