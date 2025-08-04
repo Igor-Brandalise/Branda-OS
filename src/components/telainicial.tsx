@@ -5,7 +5,7 @@ import { Separator } from "./separator";
 
 type Props = {
   voltarParaBoot: () => void;
-   irParaDesktop: () => void
+  irParaDesktop: () => void;
 };
 
 export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
@@ -37,11 +37,12 @@ export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
         <section className="flex flex-col items-center gap-8 mt-30 slide-down">
           <h1 className="text-[40px] text-zinc-50 font-semibold">Branda OS</h1>
 
-          <p className="text-[#A8A2A2]  text-[20px]">
-            A little more about me.
-          </p>
+          <p className="text-[#A8A2A2]  text-[20px]">A little more about me.</p>
 
-          <button className="botao-power border-2 w-[13rem] rounded-4xl border-zinc-300 backdrop-blur-xl text-stone-50  p-3 text-[20px] slide-down " onClick={irParaDesktop}>
+          <button
+            className="botao-power border-2 w-[13rem] rounded-4xl border-zinc-300 backdrop-blur-xl text-stone-50  p-3 text-[20px] slide-down "
+            onClick={irParaDesktop}
+          >
             Home Screen
           </button>
         </section>
