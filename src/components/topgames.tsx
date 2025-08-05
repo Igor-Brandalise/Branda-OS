@@ -6,15 +6,17 @@ type Props = {
   voltarParaDesktop: () => void;
   voltarParaBoot: () => void;
   abrirAboutMe: () => void;
+  MyRecentWork: () => void;
 };
 
 export function TopGames({
   voltarParaDesktop,
   voltarParaBoot,
   abrirAboutMe,
+  MyRecentWork
 }: Props) {
   return (
-    <main className="relative w-full h-screen text-amber-50 overflow-hidden">
+    <main className="relative w-full h-screen text-amber-50 overflow-hidden ">
       <div
         className="absolute inset-0 bg-cover bg-center blur-[20px] scale-110 z-0"
         style={{ backgroundImage: `url('/bg.png')` }}
@@ -22,7 +24,7 @@ export function TopGames({
 
       <div className="absolute inset-0 bg-stone-900/75 z-0 " />
 
-      <div className="relative z-10 flex flex-col h-full overflow-auto pb-[4.8rem] custom-scrollbar">
+      <div className="relative z-10 flex flex-col h-full overflow-auto pb-[4.8rem] custom-scrollbar slide-down">
         <header className="flex justify-between p-9">
           <h1 className="text-3xl font-bold">My Top Games</h1>
 
@@ -36,7 +38,7 @@ export function TopGames({
         <div className="flex-grow overflow-auto px-9 pb-24 ml-15">
           <ul className="space-y-10">
             <li className="flex gap-5 items-center">
-              <img src="/Elden_Ring_capa.jpg" alt="" className="h-38 w-30" />
+              <img src="/Elden_Ring_capa.jpg" alt="capa elden ring" className="h-38 w-30" />
               <div>
                 <p className="text-2xl font-bold">1. Elden Ring</p>
                 <div className="flex flex-wrap gap-2 mt-1">
@@ -57,7 +59,7 @@ export function TopGames({
             <li className="flex gap-5 items-center">
               <img
                 src="/Ghost_of_Tsushima_capa.png"
-                alt=""
+                alt="capa ghost of tsushima"
                 className="h-38 w-30"
               />
               <div>
@@ -78,7 +80,7 @@ export function TopGames({
             </li>
 
             <li className="flex gap-5 items-center">
-              <img src="/the witcher.webp" alt="" className="h-38 w-30" />
+              <img src="/the witcher.webp" alt="capa the witcher 3" className="h-38 w-30" />
               <div>
                 <p className="text-2xl font-bold">3. The Witcher 3</p>
                 <div className="flex flex-wrap gap-2 mt-1">
@@ -97,7 +99,7 @@ export function TopGames({
             </li>
 
             <li className="flex gap-5 items-center">
-              <img src="/dark souls.webp" alt="" className="h-38 w-30" />
+              <img src="/dark souls.webp" alt="capa dark souls 3" className="h-38 w-30" />
               <div>
                 <p className="text-2xl font-bold">4. Dark Souls 3</p>
                 <div className="flex flex-wrap gap-2 mt-1">
@@ -116,7 +118,7 @@ export function TopGames({
             </li>
 
             <li className="flex gap-5 items-center">
-              <img src="/shadow warrior.jpg" alt="" className="h-38 w-30" />
+              <img src="/shadow warrior.jpg" alt="capa shadow warrior 3" className="h-38 w-30" />
               <div>
                 <p className="text-2xl font-bold">5. Shadow Warrior 3</p>
                 <div className="flex flex-wrap gap-2 mt-1">
@@ -141,6 +143,7 @@ export function TopGames({
             <MenuLateral
               voltarParaBoot={voltarParaBoot}
               AboutMe={abrirAboutMe}
+              MyRecentWork={MyRecentWork}
             />
           </div>
 
