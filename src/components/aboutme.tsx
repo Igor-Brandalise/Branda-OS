@@ -7,11 +7,10 @@ type Props = {
   voltarParaDesktop: () => void;
   voltarParaBoot: () => void;
   topGames: () => void;
-  
-  
+  MyRecentWork: () => void;  
 };
 
-export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames}: Props) {
+export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames, MyRecentWork}: Props) {
   return (
     <main className="relative w-full h-screen text-amber-50 overflow-hidden">
       <div
@@ -62,7 +61,7 @@ export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames}: Props) {
 
         <footer className="fixed bottom-0 w-full backdrop-blur-[70px] h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none z-20">
           <div>
-            <MenuLateral voltarParaBoot={voltarParaBoot} topGames={topGames}/>
+            <MenuLateral voltarParaBoot={voltarParaBoot} topGames={topGames} MyRecentWork={MyRecentWork} />
           </div>
 
           <div className="flex items-center gap-4">
