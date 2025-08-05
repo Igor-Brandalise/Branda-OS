@@ -2,12 +2,16 @@ import { BatteryFull, Wifi, X } from "lucide-react";
 import { DataHora } from "./data-hora.tsx";
 import { MenuLateral } from "./menu.tsx";
 
+
 type Props = {
   voltarParaDesktop: () => void;
   voltarParaBoot: () => void;
+  topGames: () => void;
+  
+  
 };
 
-export function AboutMe({ voltarParaDesktop, voltarParaBoot }: Props) {
+export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames}: Props) {
   return (
     <main className="relative w-full h-screen text-amber-50 overflow-hidden">
       <div
@@ -58,7 +62,7 @@ export function AboutMe({ voltarParaDesktop, voltarParaBoot }: Props) {
 
         <footer className="fixed bottom-0 w-full backdrop-blur-[70px] h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none z-20">
           <div>
-            <MenuLateral voltarParaBoot={voltarParaBoot} />
+            <MenuLateral voltarParaBoot={voltarParaBoot} topGames={topGames}/>
           </div>
 
           <div className="flex items-center gap-4">
