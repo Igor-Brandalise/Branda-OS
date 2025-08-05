@@ -16,9 +16,10 @@ import {
 type Props = {
   voltarParaBoot: () => void;
   AboutMe: () => void;
+  topGames: () => void;
 };
 
-export function MenuLateral({ voltarParaBoot, AboutMe }: Props) {
+export function MenuLateral({ voltarParaBoot, AboutMe, topGames }: Props) {
   const [aberto, setAberto] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -80,7 +81,9 @@ export function MenuLateral({ voltarParaBoot, AboutMe }: Props) {
                 <p className="text-[12px] text-zinc-300">AboutMe</p>
               </li>
 
-              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer">
+              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer" onClick={() => {
+                  topGames();
+                }}>
                 <Gamepad size={40} />
                 <p className="text-[12px] text-zinc-300">My Top Games</p>
               </li>
