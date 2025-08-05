@@ -17,9 +17,10 @@ type Props = {
   voltarParaBoot: () => void;
   AboutMe: () => void;
   topGames: () => void;
+  MyRecentWork: () => void;
 };
 
-export function MenuLateral({ voltarParaBoot, AboutMe, topGames }: Props) {
+export function MenuLateral({ voltarParaBoot, AboutMe, topGames, MyRecentWork }: Props) {
   const [aberto, setAberto] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -88,15 +89,19 @@ export function MenuLateral({ voltarParaBoot, AboutMe, topGames }: Props) {
                 <p className="text-[12px] text-zinc-300">My Top Games</p>
               </li>
 
-              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer">
+              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer" onClick={() => {
+                  MyRecentWork();
+                }}>
                 <Github size={40} />
                 <p className="text-[12px] text-zinc-300">My recent Work</p>
               </li>
 
-              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-2 cursor-pointer">
-                <img src="/discord-icon.svg" alt="" className="h-10 w-10" />
-                <p className="text-[12px] text-zinc-300">My Discord</p>
-              </li>
+              <a href="https://discord.com/users/746485641927327826" target="_blank">
+                <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-2 cursor-pointer">
+                  <img src="/discord-icon.svg" alt="" className="h-10 w-10" />
+                  <p className="text-[12px] text-zinc-300">My Discord</p>
+                </li>
+              </a>
             </ul>
           </div>
 
@@ -162,7 +167,10 @@ export function MenuLateral({ voltarParaBoot, AboutMe, topGames }: Props) {
           <footer className="bg-[#27272A] absolute w-[600px] left-0 bottom-0 h-18 rounded-b-2xl flex items-center justify-between p-5 ">
             <div className="flex items-center gap-3">
               <UserCircle2 size={30} />
-              <p className="font-semibold">Igor Brandalise</p>
+              <a href="https://www.linkedin.com/in/igor-brandalise?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzIzRzN2UTYWXS5xJjv09vw%3D%3D"
+              target="_blank" className="hover:underline">
+                <p className="font-semibold">Igor Brandalise</p>
+              </a>
             </div>
             <button
               className="hover:bg-gray-200/20 transition-colors rounded-[50px] p-2"
