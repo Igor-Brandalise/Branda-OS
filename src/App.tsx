@@ -4,7 +4,8 @@ import { TelaBoot } from "./components/telaboot";
 import { TelaInicial } from "./components/telainicial";
 import { Desktop } from "./components/desktop";
 import { AboutMe } from "./components/aboutme";
-import {TopGames} from "./components/topgames"
+import { TopGames } from "./components/topgames";
+import { MyRecentWork } from "./components/recentwork";
 
 function App() {
   const [tela, setTela] = useState("boot");
@@ -28,6 +29,7 @@ function App() {
         voltarParaBoot={() => setTela("boot")}
         abrirAboutMe={() => setTela("aboutMe")}
         topGames={() => setTela("topGames")}
+        MyRecentWork={() => setTela("MyRecentWork")}
       />
     );
   }
@@ -38,6 +40,7 @@ function App() {
         voltarParaDesktop={() => setTela("desktop")}
         voltarParaBoot={() => setTela("boot")}
         topGames={() => setTela("topGames")}
+        MyRecentWork={() => setTela("MyRecentWork")}
       />
     );
   }
@@ -48,11 +51,20 @@ function App() {
         voltarParaDesktop={() => setTela("desktop")}
         voltarParaBoot={() => setTela("boot")}
         abrirAboutMe={() => setTela("aboutMe")}
+        MyRecentWork={() => setTela("MyRecentWork")}
       />
     );
   }
-
-
+  if (tela === "MyRecentWork") {
+    return (
+      <MyRecentWork
+        voltarParaDesktop={() => setTela("desktop")}
+        voltarParaBoot={() => setTela("boot")}
+        topGames={() => setTela("topGames")}
+        abrirAboutMe={() => setTela("aboutMe")}
+      />
+    );
+  }
 
   return null;
 }
