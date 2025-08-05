@@ -4,6 +4,7 @@ import { TelaBoot } from "./components/telaboot";
 import { TelaInicial } from "./components/telainicial";
 import { Desktop } from "./components/desktop";
 import { AboutMe } from "./components/aboutme";
+import {TopGames} from "./components/topgames"
 
 function App() {
   const [tela, setTela] = useState("boot");
@@ -26,6 +27,7 @@ function App() {
       <Desktop
         voltarParaBoot={() => setTela("boot")}
         abrirAboutMe={() => setTela("aboutMe")}
+        topGames={() => setTela("topGames")}
       />
     );
   }
@@ -35,9 +37,22 @@ function App() {
       <AboutMe
         voltarParaDesktop={() => setTela("desktop")}
         voltarParaBoot={() => setTela("boot")}
+        topGames={() => setTela("topGames")}
       />
     );
   }
+
+  if (tela === "topGames") {
+    return (
+      <TopGames
+        voltarParaDesktop={() => setTela("desktop")}
+        voltarParaBoot={() => setTela("boot")}
+        abrirAboutMe={() => setTela("aboutMe")}
+      />
+    );
+  }
+
+
 
   return null;
 }
