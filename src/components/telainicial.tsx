@@ -12,20 +12,23 @@ export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
   return (
     <div className="bg-windows-on ">
       <main className="slide-down">
-        <header className="flex justify-between items-center pt-12 p-17 slide-down">
-          <p className="text-zinc-400 font-bold text-[18px]">
-            Made by{" "}
-            <a
-              href="https://www.linkedin.com/in/igor-brandalise?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzIzRzN2UTYWXS5xJjv09vw%3D%3D"
-              target="_blank"
-              className="hover:underline text-zinc-50"
-            >
-              Igor Brandalise
-            </a>
-          </p>
+        <header className="flex justify-between items-center pt-10 p-8 sm:pt-12 sm:p-17 slide-down">
+
+          <div>
+            <p className="text-zinc-400 font-bold text-[15px] sm:text-[18px] flex flex-col sm:block">
+              Made by{" "}
+              <a
+                href="https://www.linkedin.com/in/igor-brandalise?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzIzRzN2UTYWXS5xJjv09vw%3D%3D"
+                target="_blank"
+                className="hover:underline text-zinc-50"
+              >
+                Igor Brandalise
+              </a>
+            </p>
+          </div>
 
           <div className="flex flex-row items-center gap-5 slide-down">
-            <button className="botao-boot-2 mr-5" onClick={voltarParaBoot}>
+            <button className="botao-boot-2 sm:mr-5" onClick={voltarParaBoot}>
               <FaPowerOff size={15} color="white" />
             </button>
 
@@ -34,7 +37,7 @@ export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
           </div>
         </header>
 
-        <section className="flex flex-col items-center gap-8 mt-30 slide-down">
+        <section className="flex flex-col items-center gap-3 mt-25 slide-down sm:mt-30 sm:gap-8">
           <h1 className="text-[40px] text-zinc-50 font-semibold">Branda OS</h1>
 
           <p className="text-[#A8A2A2]  text-[20px]">A little more about me.</p>

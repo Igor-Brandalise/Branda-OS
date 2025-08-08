@@ -26,7 +26,7 @@ export function TopGames({
 
       <div className="relative z-10 flex flex-col h-full overflow-auto pb-[4.8rem] custom-scrollbar slide-down">
         <header className="flex justify-between p-9">
-          <h1 className="text-3xl font-bold">My Top Games</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">My Top Games</h1>
 
           <X
             size={35}
@@ -35,18 +35,18 @@ export function TopGames({
           />
         </header>
 
-        <div className="flex-grow overflow-auto px-9 pb-24 ml-15">
+        <div className="flex-grow overflow-auto px-9 pb-24 sm:ml-15">
           <ul className="space-y-10">
             <li className="flex gap-5 items-center">
-              <img src="/Elden_Ring_capa.jpg" alt="capa elden ring" className="h-38 w-30" />
+              <img src="/Elden_Ring_capa.jpg" alt="capa elden ring" className="w-24 h-32 sm:w-28 sm:h-36 object-cover rounded" />
               <div>
-                <p className="text-2xl font-bold">1. Elden Ring</p>
+                <p className="text-[18px] sm:text-2xl font-bold">1. Elden Ring</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {["Ação", "RPG", "Mundo Aberto", "Soulslike"].map(
                     (tag, i) => (
                       <span
                         key={i}
-                        className="bg-amber-800/40 text-amber-200 text-[13px] font-semibold px-2 py-1 rounded-full"
+                        className="bg-amber-800/40 text-amber-200 text-[12px] sm:text-[13px] font-semibold px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -60,16 +60,16 @@ export function TopGames({
               <img
                 src="/Ghost_of_Tsushima_capa.png"
                 alt="capa ghost of tsushima"
-                className="h-38 w-30"
+                className="w-24 h-32 sm:w-28 sm:h-36 object-cover rounded"
               />
               <div>
-                <p className="text-2xl font-bold">2. Ghost of Tsushima</p>
+                <p className="text-[18px] sm:text-2xl font-bold">2. Ghost of Tsushima</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {["Ação", "Aventura", "Mundo Aberto", "Stealth"].map(
                     (tag, i) => (
                       <span
                         key={i}
-                        className="bg-emerald-800/40 text-emerald-200 text-[13px] font-semibold  px-2 py-1 rounded-full"
+                        className="bg-emerald-800/40 text-emerald-200 text-[12px] sm:text-[13px] font-semibold  px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -80,15 +80,15 @@ export function TopGames({
             </li>
 
             <li className="flex gap-5 items-center">
-              <img src="/the witcher.webp" alt="capa the witcher 3" className="h-38 w-30" />
+              <img src="/the witcher.webp" alt="capa the witcher 3" className="w-24 h-32 sm:w-28 sm:h-36 object-cover rounded" />
               <div>
-                <p className="text-2xl font-bold">3. The Witcher 3</p>
+                <p className="text-[18px] sm:text-2xl font-bold">3. The Witcher 3</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {["RPG", "Mundo Aberto", "Fantasia", "Aventura"].map(
                     (tag, i) => (
                       <span
                         key={i}
-                        className="bg-purple-800/40 text-purple-200 text-[13px] font-semibold  px-2 py-1 rounded-full"
+                        className="bg-purple-800/40 text-purple-200 text-[12px] sm:text-[13px] font-semibold  px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -99,15 +99,15 @@ export function TopGames({
             </li>
 
             <li className="flex gap-5 items-center">
-              <img src="/dark souls.webp" alt="capa dark souls 3" className="h-38 w-30" />
+              <img src="/dark souls.webp" alt="capa dark souls 3" className="w-24 h-32 sm:w-28 sm:h-36 object-cover rounded" />
               <div>
-                <p className="text-2xl font-bold">4. Dark Souls 3</p>
+                <p className="text-[18px] sm:text-2xl font-bold">4. Dark Souls 3</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {["Ação", "RPG", "Soulslike", "Fantasia Sombria"].map(
                     (tag, i) => (
                       <span
                         key={i}
-                        className="bg-indigo-800/40 text-indigo-200 text-[13px] font-semibold  px-2 py-1 rounded-full"
+                        className="bg-indigo-800/40 text-indigo-200 text-[12px] sm:text-[13px] font-semibold  px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -118,15 +118,15 @@ export function TopGames({
             </li>
 
             <li className="flex gap-5 items-center">
-              <img src="/shadow warrior.jpg" alt="capa shadow warrior 3" className="h-38 w-30" />
+              <img src="/shadow warrior.jpg" alt="capa shadow warrior 3" className="w-24 h-32 sm:w-28 sm:h-36 object-cover rounded" />
               <div>
-                <p className="text-2xl font-bold">5. Shadow Warrior 3</p>
+                <p className="text-[18px] sm:text-2xl font-bold">5. Shadow Warrior 3</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {["FPS", "Ação", "Hack and Slash", "Aventura"].map(
                     (tag, i) => (
                       <span
                         key={i}
-                        className="bg-rose-800/40 text-rose-200 text-[13px] font-semibold  px-2 py-1 rounded-full"
+                        className="bg-rose-800/40 text-rose-200 text-[12px] sm:text-[13px] font-semibold  px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -138,7 +138,7 @@ export function TopGames({
           </ul>
         </div>
 
-        <footer className="fixed bottom-0 w-full backdrop-blur-[70px] h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none z-20 ">
+        <footer className="fixed bottom-0 w-full bg-stone-800/35 backdrop-blur-[70px] h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none z-20 ">
           <div>
             <MenuLateral
               voltarParaBoot={voltarParaBoot}

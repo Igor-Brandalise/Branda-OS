@@ -12,7 +12,7 @@ type Props = {
 
 export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames, MyRecentWork}: Props) {
   return (
-    <main className="relative w-full h-screen text-amber-50 overflow-hidden">
+    <main className="relative w-full h-screen text-amber-50 overflow-hidden ">
       <div
         className="absolute inset-0 bg-cover bg-center blur-[20px] scale-110 z-0"
         style={{ backgroundImage: `url('/bg.png')` }}
@@ -22,7 +22,7 @@ export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames, MyRecentW
 
       <div className="relative z-10 flex flex-col h-full slide-down">
         <div className="flex justify-between p-9">
-          <h1 className="text-3xl font-bold">About Me</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">About Me</h1>
 
           <X
             size={35}
@@ -31,7 +31,8 @@ export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames, MyRecentW
           />
         </div>
 
-        <div className="max-w-5xl px-10 text-[20px] mt-5 flex-grow overflow-auto">
+      <div className="max-w-5xl px-10 text-[17px] sm:text-[20px] sm:mt-5 overflow-auto"
+     style={{ maxHeight: "calc(90vh - 8rem)" }}>
           <p>
             Olá! Me chamo Igor Brandalise, tenho 17 anos e sou apaixonado por
             tecnologia, design e desenvolvimento web.
@@ -59,7 +60,7 @@ export function AboutMe({ voltarParaDesktop, voltarParaBoot, topGames, MyRecentW
           </p>
         </div>
 
-        <footer className="fixed bottom-0 w-full backdrop-blur-[70px] h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none z-20">
+        <footer className="fixed bottom-0 w-full bg-stone-900/35 backdrop-blur-[70px] h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none z-20">
           <div>
             <MenuLateral voltarParaBoot={voltarParaBoot} topGames={topGames} MyRecentWork={MyRecentWork} />
           </div>

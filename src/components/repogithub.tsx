@@ -44,16 +44,16 @@ export function GithubRepos() {
   }, []);
 
   return (
-    <div className="p-4">
+    <div className=" p-4">
       
-      <ul className="space-y-4">
+      <ul className="space-y-4 ">
         {repos.map((repo, index) => (
           <motion.li
             key={repo.name}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-stone-800 p-4 rounded-lg shadow-md hover:shadow-amber-400/20 transition-shadow w-4xl ml-20"
+            className="bg-stone-800 p-4 rounded-lg shadow-md hover:shadow-amber-400/20 transition-shadow sm:ml-20 w-[360px] sm:w-[500px] md:w-2xl lg:w-4xl "
           >
             <a
               href={repo.html_url}

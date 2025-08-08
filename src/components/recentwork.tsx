@@ -25,7 +25,7 @@ export function MyRecentWork({ voltarParaDesktop, voltarParaBoot, topGames, abri
 
       <div className="relative z-10 flex flex-col h-full overflow-auto pb-[4.8rem] custom-scrollbar">
         <header className="flex justify-between p-9">
-          <h1 className="text-3xl font-bold">My Recent Work</h1>
+          <h1 className="text-[22px] sm:text-3xl font-bold">My Recent Work</h1>
 
           <X
             size={35}

@@ -12,7 +12,7 @@ type Props = {
 export function Desktop({ voltarParaBoot, abrirAboutMe, topGames, MyRecentWork }: Props) {
   return (
     <div className="bg-windows-on">
-      <footer className="fixed bottom-0 w-full backdrop-blur-xl h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none">
+      <footer className="fixed bottom-0 w-full backdrop-blur-xl h-[4rem] sm:h-[4.7rem] text-white flex justify-between items-center px-4 py-2 shadow-inner select-none">
         <div>
           <MenuLateral
             voltarParaBoot={voltarParaBoot}
