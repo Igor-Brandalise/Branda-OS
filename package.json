@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
+    "@vercel/speed-insights": "^1.2.0",
     "dayjs": "^1.11.13",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.535.0",
