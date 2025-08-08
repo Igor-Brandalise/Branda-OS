@@ -15,19 +15,22 @@ import {
 
 type Props = {
   voltarParaBoot: () => void;
-  AboutMe: () => void;
-  topGames: () => void;
-  MyRecentWork: () => void;
+  AboutMe?: () => void;
+  topGames?: () => void;
+  MyRecentWork?: () => void;
 };
 
-export function MenuLateral({ voltarParaBoot, AboutMe, topGames, MyRecentWork }: Props) {
+export function MenuLateral({
+  voltarParaBoot,
+  AboutMe,
+  topGames,
+  MyRecentWork,
+}: Props) {
   const [aberto, setAberto] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-
   return (
     <div className="fixed bottom-4 left-4 z-50">
-      
       <button
         onClick={(e) => {
           e.stopPropagation(); // Impede que clique no botão feche o menu
@@ -49,8 +52,6 @@ export function MenuLateral({ voltarParaBoot, AboutMe, topGames, MyRecentWork }:
           ref={menuRef}
           className="absolute bottom-20 left-0 w-[350px] h-[550px] sm:w-[600px] sm:h-[500px] bg-zinc-900/99 text-white rounded-2xl shadow-2xl p-6 animate-slide-up"
         >
-          
-
           <form onSubmit={searchOnGoogle} className=" relative w-full ">
             <input
               name="search"
@@ -73,33 +74,44 @@ export function MenuLateral({ voltarParaBoot, AboutMe, topGames, MyRecentWork }:
           <div className="mt-5 sm:mt-7">
             <ul className="flex flex-row gap-2 sm:gap-8">
               <li
-                className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-2 cursor-pointer"
-                onClick={() => {
-                  AboutMe();
-                }}
+                className="flex items-center justify-center flex-col hover:bg-gray-200/20 transition-colors rounded-md p-2 cursor-pointer"
+                onClick={AboutMe}
               >
                 <CircleUserRound size={40} className="text-white" />
-                <p className="text-[10px] sm:text-[12px] text-zinc-300">AboutMe</p>
+                <p className="text-[10px] sm:text-[12px] text-zinc-300">
+                  AboutMe
+                </p>
               </li>
 
-              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer" onClick={() => {
-                  topGames();
-                }}>
+              <li
+                className="flex items-center justify-center flex-col hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer"
+                onClick={topGames}
+              >
                 <Gamepad size={40} />
-                <p className="text-[10px] sm:text-[12px] text-zinc-300">My Top Games</p>
+                <p className="text-[10px] sm:text-[12px] text-zinc-300">
+                  My Top Games
+                </p>
               </li>
 
-              <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer" onClick={() => {
-                  MyRecentWork();
-                }}>
+              <li
+                className="flex items-center justify-center flex-col hover:bg-gray-200/20 transition-colors rounded-md p-1 cursor-pointer"
+                onClick={MyRecentWork}
+              >
                 <Github size={40} />
-                <p className="text-[10px] sm:text-[12px] text-zinc-300">My recent Work</p>
+                <p className="text-[10px] sm:text-[12px] text-zinc-300">
+                  My recent Work
+                </p>
               </li>
 
-              <a href="https://discord.com/users/746485641927327826" target="_blank">
+              <a
+                href="https://discord.com/users/746485641927327826"
+                target="_blank"
+              >
                 <li className="flex items-center justify-center flex-col  hover:bg-gray-200/20 transition-colors rounded-md p-2 cursor-pointer">
                   <img src="/discord-icon.svg" alt="" className="h-10 w-10" />
-                  <p className="text-[10px] sm:text-[12px] text-zinc-300">My Discord</p>
+                  <p className="text-[10px] sm:text-[12px] text-zinc-300">
+                    My Discord
+                  </p>
                 </li>
               </a>
             </ul>
@@ -167,8 +179,11 @@ export function MenuLateral({ voltarParaBoot, AboutMe, topGames, MyRecentWork }:
           <footer className="bg-[#27272A] absolute w-[350px] sm:w-[600px] left-0 bottom-0 h-18 rounded-b-2xl flex items-center justify-between p-5 ">
             <div className="flex items-center gap-3">
               <UserCircle2 size={30} />
-              <a href="https://www.linkedin.com/in/igor-brandalise?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzIzRzN2UTYWXS5xJjv09vw%3D%3D"
-              target="_blank" className="hover:underline">
+              <a
+                href="https://www.linkedin.com/in/igor-brandalise?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzIzRzN2UTYWXS5xJjv09vw%3D%3D"
+                target="_blank"
+                className="hover:underline"
+              >
                 <p className="font-semibold">Igor Brandalise</p>
               </a>
             </div>
