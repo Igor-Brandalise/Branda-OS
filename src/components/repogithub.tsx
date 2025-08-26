@@ -6,7 +6,7 @@ type Repo = {
   name: string;
   html_url: string;
   description: string | null;
-  topics?: string[];  // topics é opcional
+  topics?: string[]; // topics é opcional
 };
 
 export function GithubRepos() {
@@ -31,7 +31,9 @@ export function GithubRepos() {
         );
 
         if (!res.ok) {
-          throw new Error(`Erro ao buscar repositórios: ${res.status} ${res.statusText}`);
+          throw new Error(
+            `Erro ao buscar repositórios: ${res.status} ${res.statusText}`
+          );
         }
 
         const data: Repo[] = await res.json();
