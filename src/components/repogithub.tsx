@@ -21,9 +21,10 @@ export function GithubRepos() {
         }
 
         const headers: HeadersInit = {
-          Accept: "application/vnd.github.mercy-preview+json",
-          Authorization: `token ${token}`, // garante que token seja usado
+          Accept: "application/vnd.github.mercy-preview+json", // habilita topics
+          ...(token ? { Authorization: `token ${token}` } : {}),
         };
+
         const res = await fetch(
           "https://api.github.com/users/Igor-Brandalise/repos?sort=updated&per_page=6",
           { headers }
