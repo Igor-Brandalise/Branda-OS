@@ -35,7 +35,7 @@ export function TopGames({
           />
         </header>
 
-        <div className="flex-grow overflow-auto px-9 pb-24 sm:ml-15">
+        <div className="grow overflow-auto px-9 pb-24 sm:ml-15">
           <ul className="space-y-10">
             <li className="flex gap-5 items-center">
               <img src="/Elden_Ring_capa.jpg" alt="capa elden ring" className="w-24 h-32 sm:w-28 sm:h-36 object-cover rounded" />

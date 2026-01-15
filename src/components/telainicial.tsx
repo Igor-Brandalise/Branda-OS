@@ -43,7 +43,7 @@ export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
           <p className="text-[#A8A2A2]  text-[20px]">A little more about me.</p>
 
           <button
-            className="botao-power border-2 w-[13rem] rounded-4xl border-zinc-300 backdrop-blur-xl text-stone-50  p-3 text-[20px] slide-down "
+            className="botao-power border-2 w-52 rounded-4xl border-zinc-300 backdrop-blur-xl text-stone-50  p-3 text-[20px] slide-down "
             onClick={irParaDesktop}
           >
             Home Screen
@@ -51,7 +51,7 @@ export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
         </section>
 
         <section className="flex  flex-row justify-center mt-22 slide-down">
-          <button className="botao-power justify-center flex items-center backdrop-blur-xl border-2 border-zinc-300 rounded-3xl p-3 w-[9rem] gap-5 hover:scale-100">
+          <button className="botao-power justify-center flex items-center backdrop-blur-xl border-2 border-zinc-300 rounded-3xl p-3 w-36 gap-5 hover:scale-100">
             <a
               href="https://github.com/Igor-Brandalise"
               target="_blank"
@@ -61,7 +61,7 @@ export function TelaInicial({ voltarParaBoot, irParaDesktop }: Props) {
               <Github color="white" />
             </a>
 
-            <div className="h-[20px]">
+            <div className="h-5">
               <Separator orientation="vertical" />
             </div>
 
